@@ -1,12 +1,8 @@
-from unittest import result
-
-
 print("a * x + b = 0")
+user_in = input("Enter a = ")
+num_a = int(user_in)
+user_in = input("Enter b = ")
+num_b = int(user_in)
 
-number_a = input ("Enter a = ")
-user_int = int(number_a)
-
-number_b = input("Enter b = ")
-user_int = int(number_b)
-
-result = 
+result = (-num_b)//num_a
+print("x = ", result)
