@@ -1,9 +1,13 @@
 #task2
-user_input = input("Enter number: ")
-user_int1 = int(user_input)
+user_input1 = input("Enter number: ")
+user_input2 = input("Enter number: ")
 
-user_input = input("Enter number: ")
-user_int2 = int(user_input)
-
-result = (user_int1+user_int2) // 2
-print("Result is", result)
+try:
+    user_int1 = int(user_input1)
+    user_int2 = int(user_input2)
+except ValueError:
+    message = "Error! You have entered not number!"
+else:
+    result = (user_int1+user_int2) // 2
+    message = result
+print(message)
