@@ -1,9 +1,8 @@
 #task2
-user_in = input("Enter word with 3 letter:")
-word = user_in
-s = 0
-i = 1
-l(word) 
-s = s+ord(word[i])
+word = input("Enter word with 3 letter:")
+first_slice = word[0]
+second_slice = word[1]
+third_slice = word[2]
 
-print(s)
+sum = ord(first_slice) + ord(second_slice) + ord(third_slice)
+print(sum)

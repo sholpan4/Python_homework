@@ -1,10 +1,6 @@
 #task4
 user_in = input("Enter word:")
+index = len(user_in) //2
 
-
-first_slice = user_in[:]
-second_slice = user_in[:]
-
-# = str.partition(str, sep," ")
-#full_word = first_slice + " " + second_slice
-print(user_in)
+print(user_in[:index])
+print(user_in[index:])
