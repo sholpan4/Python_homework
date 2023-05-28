@@ -9,7 +9,7 @@ try:
 except ValueError:
     message = "Error! You have entered not number!"
 else:
-    result = (-num_b)/num_a
+    result = (-num_b)/num_a   # VN: эту строку тоже можно поместить в блок try и перехватить ZeroDivisionError
     message = print('x =', result)
 
 print(message)
