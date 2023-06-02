@@ -11,6 +11,8 @@ except NameError:
 
 if (year % 4 == 0) and (year % 100 != 0) or (year % 400 == 0):
     message = "This is the leap year"
+if year is str(user_in):
+    message = "You've entered not a number!"
 else:
     message = "This is not the leap year!"
 

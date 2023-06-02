@@ -16,8 +16,8 @@ if type(num) is int:
         message = "%d and %d are the same numbers " % (num1, num3)
     elif num2 == num3:
         message = "%d and %d are the same numbers " % (num2, num3)
-    else num <= 999:
-        message = "Please enter three digit number!"
+    #else num <= 999:
+        #message = "Please enter three digit number!"
 else:
     message = "You've entered not number!"
 
