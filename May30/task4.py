@@ -1,9 +1,10 @@
-value = 'Hexlet'
-value[::] = 'Hexlet'  # Вся строка
-value[:] = 'Hexlet'  # Вся строка
-value[::2] = 'Hxe'  # Четные по порядку символы
-value[1::2] = 'elt'  # Нечетные по порядку символы
-value[::-1] = 'telxeH'  # Вся строка в обратном порядке
-value[5:] = 't'  # Строка, начиная с шестого символа
-value[:5] = 'Hexle'  # Строка до шестого символа
-value[-2:1:-1] = 'elx'  # Все символы с предпоследнего до третьего в обратном порядке. Во всех случаях выборки от большего индекса к меньшему нужно указывать шаг
+#task4
+user_in = str(input("Enter word with five letter:"))
+word = user_in[::-1]
+
+if user_in == word:
+    message = "This word is a palindrome."
+else:
+    message = "This word is not a palindrome"
+
+print(message)
