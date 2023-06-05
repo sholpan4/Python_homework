@@ -1,26 +1,26 @@
+#task6
 user_in = input("Enter the cost of purchase:")
-cost = int(user_in)
-#try:
-    #cost = int(user_in)
-#except ValueError:
-    #cost = ""
-    #message = "Please enter a number!"
-#if type(cost) is int():
+cost = float(user_in)
+
 if cost < 200:
+    print("There is no discount.")
     result = cost
-    template = "There is no discount. Total amount is $ %d" 
+    template = "Total amount to pay: $ %.2f" 
     message = template % result
 elif 200 <= cost <= 300:
-    result = cost * 3 / 100
-    template = "Discount 3%. Total amount is $ %d" 
+    print("The discount is 3%.")
+    result = float(cost - cost * 0.03)
+    template = "Total amount to pay: $ %.2f"
     message = template % result
 elif 300 <= cost <= 500:
-    result = cost * 5 / 100
-    template = "Discount 5%. Total amount is $ %d" 
+    print("The discount is 5%.")
+    result = float(cost - cost * 0.05)
+    template = "Total amount to pay: $ %.2f"
     message = template % result
-elif cost >= 500: # cost > 500:
-    result = cost * 5 / 100
-    template = "Discount 7%. Total amount is $ %d" 
+elif cost >= 500: 
+    print("The discount is 7%.")
+    result = float(cost - cost * 0.07)
+    template = "Total amount to pay: $ %.2f"
     message = template % result
 else:
     message = "Please enter a number!"
