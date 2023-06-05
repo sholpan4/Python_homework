@@ -1,6 +1,7 @@
 #task6
 user_in = input("Enter the cost of purchase:")
 cost = float(user_in)
+# вместе с try и except не смогла сделать((( сделала самый простой вариант)
 
 if cost < 200:
     print("There is no discount.")
