@@ -1,8 +1,19 @@
-def get_less_num(num, num2):
+def get_num(num, num2):
     if num < num2:
-        message = num
+        template = -1
+        message = template
+    elif num > num2:
+        template = 1
+        message = template
+    elif num == num2:
+        template = 0
+        message = template
     else:
-        message = num2
-    print("Меньшая из двух чисел:", message)
+        message = "Please enter number!"
+    print("Result is:", message)
 
-get_less_num (4,6)
+num = int(input("Enter first number:"))
+num2 = int(input("Enter second number:"))
+
+result = get_num
+print("Result is:", result)
