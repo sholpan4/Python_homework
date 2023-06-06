@@ -1,6 +1,6 @@
 #task4
 user_in = input("Enter word with five letter:")
-
+#правда тут и с цифрами прокатывает)
 try:
     str = str(user_in)
     word = str[::-1]
