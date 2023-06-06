@@ -1,6 +1,6 @@
 def get_sum(num):
     s = 0
-    fn = (1, n + 1):
+    fn = (n, n + 1)
     s = fn + s
         
 

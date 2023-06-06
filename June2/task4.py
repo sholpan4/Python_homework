@@ -5,6 +5,6 @@ def recur(num):
         return
     print(num)
     recur(num-1)
-    #print(num)
+    sum 
 
 recur(4)
