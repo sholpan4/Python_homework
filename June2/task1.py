@@ -1,19 +1,11 @@
+#task1
 def get_num(num, num2):
     if num < num2:
-        template = -1
-        message = template
+        return -1
     elif num > num2:
-        template = 1
-        message = template
+        return 1
     else:
-        template = 0
-        message = template
-    #else:
-        #message = "Please enter number!"
-    print("Result is:", message)
-
-num = int(input("Enter first number:"))
-num2 = int(input("Enter second number:"))
-
-result = get_num(5, 4)
-print("Result is:", result)
+        return 0
+    
+num = get_num (10, 10)
+print(num)

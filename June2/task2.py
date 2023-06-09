@@ -1,7 +1,8 @@
-def get_sum(num):
-    s = 0
-    fn = (n, n + 1)
-    s = fn + s
-        
+def get_sum(n):
+  if n > 0:  
+    result = 0 + (n - 1)
+    return result
+    
 
-n = int(input("Enter a number:"))
+n = get_sum (5)
+print(n)
