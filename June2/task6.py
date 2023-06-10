@@ -4,16 +4,17 @@ def get_time(hours, minutes, seconds):
     sec = int(seconds)
     
     if hours == 0:
-        message = "00:%02d:%02d" % min, sec
+        message = "%02d:%02d:%02d" % h, min, sec
         return message
     
     elif minutes == 0:
-        message = "%02d:00:%02d" % h, sec
+        message = "%02d:%02d:%02d" % h, min, sec
         return message
     
     elif seconds == 0:
-        message = "%02d:%02d:00" % h, min
+        message = "%02d:%02d:%02d" % h, min, sec
         return message
+    
     else:
         message = "%02d:%02d:%02d" % h, min, sec
         return message
