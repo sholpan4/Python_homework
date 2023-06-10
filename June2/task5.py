@@ -1,7 +1,7 @@
 #task5
 def get_volume(height, radian):
     pi = 3.14159
-    return pi * radian ** 2 * height * 1000
+    return pi * radian ** 2 * height * 1000 #чтобы перевести сразу в литры
 
 height = float(input("Height of cylinder in meter: "))
 radian = float(input("Radius of cylinder in meter: "))

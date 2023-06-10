@@ -1,27 +1,17 @@
+#task6
+hours = int(input("Enter hours:"))
+minutes = int(input("Enter minutes:"))
+seconds = int(input("Enter seconds:"))
+
 def get_time(hours, minutes, seconds):
-    h = int(hours)
-    min = int(minutes)
-    sec = int(seconds)
-    
-    if hours == 0:
-        message = "%02d:%02d:%02d" % h, min, sec
-        return message
-    
-    elif minutes == 0:
-        message = "%02d:%02d:%02d" % h, min, sec
-        return message
-    
-    elif seconds == 0:
-        message = "%02d:%02d:%02d" % h, min, sec
-        return message
-    
-    else:
-        message = "%02d:%02d:%02d" % h, min, sec
-        return message
-
-# hours = int(input("Enter hours:"))
-# minutes = int(input("Enter minutes:"))
-# seconds = int(input("Enter seconds:"))
-
-number = get_time(2, 0, 30)
-print(number)
+    if hours > 23:
+        return "Please enter hours between 0 and 23."
+    elif minutes > 59:
+        return "Please enter minutes between 0 and 59."
+    elif seconds > 59:
+        return "Please enter seconds between 0 and 59"
+    else:  
+        return "%02d:%02d:%02d" % (hours, minutes, seconds)
+  
+message = get_time(hours, minutes, seconds)      
+print(message)
