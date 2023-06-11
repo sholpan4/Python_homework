@@ -1,8 +1,8 @@
+#task2
+sum = 0
+num = 5
+for i in range(1, num + 1):   
+    sum += i    
 
-def get_sum(n):
-  if n > 0:  
-    result = 0 + (n - 1)
-    return result    
-
-n = get_sum (5)
-print(n)
+print(sum)
+#самое простое что пришло в голову)
