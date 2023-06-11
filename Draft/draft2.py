@@ -1,5 +1,6 @@
-sum = 0
-n= 6
-for i in range(1, n + 1):
-    sum += i 
-print(sum)
+def factor(num):
+    if num ==1:
+        return 1
+    return num * factor(num-1)
+result = factor(6)
+print(result)
