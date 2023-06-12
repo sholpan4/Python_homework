@@ -25,11 +25,11 @@ def game():
             counter -= 1 < 7
             print("Take bigger. You have %d attempts left." % counter)
             game()
-        if my_random < num:
+        while my_random < num:
             counter -= 1 < 7
             print("Take smaller. You have %d attempts left." % counter)
             game()
-        if counter == 0:
+        while counter == 0:
             print("You lose! The number was %d" % random)
         else:
 
