@@ -6,6 +6,7 @@ try:
     c = float(user_in1)
     p = float(user_in2)
     
+    # VN: Остальные строки ислючений не сделают и не нужны в try 
     r = c / 6.28318
     s_circle = float(3.14159 * r)
     
@@ -18,6 +19,7 @@ except ValueError:
 except NameError: #не получается поймать (((( 
     message = "Please enter number!"
 
+# VN: здесь программа падает, если ввод некорректный. Нужна проверка c и p на пустые значения
 if s_circle <= s_square:
     message = "This cirle can be fit into this square."
 elif s_circle > s_square:

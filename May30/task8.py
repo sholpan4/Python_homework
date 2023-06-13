@@ -8,6 +8,15 @@ print("""Question 1. The capital of Grade Britain?
       """)
 answer = int(input("Your answer is:"))
 
+# VN: Вообще, нет смысла проверять ответ пользователя на все возможные значения. И преобразовывать в число - тоже
+# score = 0
+# ...
+# if user_in == "3":
+#     message = "Right!"
+#     score += 2
+# else:
+#     message = "Wrong answer!"
+
 if answer == 1:
     result = 0
     message = "Wrong answer!"
