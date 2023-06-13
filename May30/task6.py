@@ -3,11 +3,12 @@ user_in = input("Enter the cost of purchase:")
 cost = float(user_in)
 # вместе с try и except не смогла сделать((( сделала самый простой вариант)
 
+
 if cost < 200:
     print("There is no discount.")
     result = cost
-    template = "Total amount to pay: $ %.2f" 
-    message = template % result
+    template = "Total amount to pay: $ %.2f"  # VN: эти две строки повторяются везде
+    message = template % result               # а значит, можно их вынести вниз, за пределы if
 elif 200 <= cost <= 300:
     print("The discount is 3%.")
     result = float(cost - cost * 0.03)
