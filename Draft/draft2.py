@@ -1,7 +1,9 @@
 list_hor = ["a", "b", "c", "d", "e", "f", "g", "h"]
-list_ver = [1,2,3,4,5,6,7,8]
+list_ver = ["#", " ", "#", " ", "#", " ", "#", " "]
+list_ver2 = [" ", "#", " ", "#", " ", "#", " ", "#"]
 
 for a in list_hor:
     for b in list_ver:
+        for c in list_ver2:
         #result = 
-        print(a, b)
+            print(a, b, c)
