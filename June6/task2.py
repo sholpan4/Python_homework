@@ -1,14 +1,24 @@
 
-week_days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]   
-print("Monday")
-user_in = input("Do you want to see next day? (Y=1 \ N=2)")
-for day in range(week_days):
-    
-        if user_in == 1:
-            print (day)
-            #continue
-            user_in = input("Do you want to see next day? (Y \ N)")
-            continue
-        elif user_in == 2:
-              break
-        
+def print_weekday(day=1):
+    if day == 1:
+        dayname = "Monday"
+    elif day == 2:
+        dayname = "Tuesday"
+    elif day == 3:
+        dayname = "Wednesday"
+    elif day == 4:
+        dayname = "Thursday"
+    elif day == 5:
+        dayname = "Friday"
+    elif day == 6:
+        dayname = "Saturday"
+    elif day == 7:
+        dayname = "Sunday"
+    print("The day of the week is ", dayname)
+    answer = input("Would you like to know next day?")
+    if answer == "yes" or answer == "да":
+        day += 1
+        if day > 7:
+            day = 1
+        print_weekday(day)
+print_weekday()
