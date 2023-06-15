@@ -22,12 +22,12 @@ def game():
         game()
     else:
         while my_random > num:
-            counter -= 1 < 7
-            print("Take bigger. You have %d attempts left." % counter)
+            count = counter - 1
+            print("Take bigger. You have %d attempts left." % count)
             game()
         while my_random < num:
-            counter -= 1 < 7
-            print("Take smaller. You have %d attempts left." % counter)
+            count = counter - 1
+            print("Take smaller. You have %d attempts left." % count)
             game()
         while counter == 0:
             print("You lose! The number was %d" % random)
