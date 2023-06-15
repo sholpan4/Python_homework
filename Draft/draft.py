@@ -1,14 +1,16 @@
+
 def recur(num):
+
+    try:
+        num <= 0
+        print("Please enter integer number!")
+    except ValueError:
+        num = " "
+
+        if num > 0:  
+            return
+        recur(num-1)
+        print("😎")
     
-    if num < 0:  
-        return
-
-    recur(num-1)
-    print(num)
-
-recur(4)
-
-def get_sum_recur(recur):
-    sum = recur_result
-    
-get_sum_recur(recur)
+user_in = int(input("How many times print 😎?"))
+recur(user_in - 1)

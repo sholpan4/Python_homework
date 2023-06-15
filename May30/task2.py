@@ -2,7 +2,7 @@
 user_in = input("Enter three digit number:")
 
 try:
-    num = str(user_in)
+    num = str(user_in) #можно не писать str 150623
     
     num1 = num[0]
     num2 = num[1]

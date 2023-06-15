@@ -5,4 +5,5 @@ def recur(num):
     recur(num-1)
     print("😎")
 
-recur(4)
+user_in = int(input("How many times print 😎?"))
+recur(user_in - 1)
