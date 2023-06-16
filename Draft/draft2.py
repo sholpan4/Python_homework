@@ -1,9 +1,15 @@
-list_hor = ["a", "b", "c", "d", "e", "f", "g", "h"]
-list_ver = ["#", " ", "#", " ", "#", " ", "#", " "]
-list_ver2 = [" ", "#", " ", "#", " ", "#", " ", "#"]
+num = int(input("Enter a number from 2 to 9:"))
+def multipl_table():
+    
+    if (num < 1) or (num > 9):
+        print("Error! Please enter a number from 2 to 9")
+    else:
+        num = int
+        for i in range(0, 11):
+            
+            num *= i
+            return num
+        #multipl_table()
 
-for a in list_hor:
-    for b in list_ver:
-        for c in list_ver2:
-        #result = 
-            print(a, b, c)
+result = multipl_table() 
+print(result)

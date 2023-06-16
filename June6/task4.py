@@ -13,7 +13,7 @@ print("Let's play game. You have to guess the number with 7 attempts. Good luck!
 def game():
     
     user_in = input("Your number from 0 tll 100:")
-    counter = 7
+   
    
     try:
         num = int(user_in)
@@ -22,18 +22,19 @@ def game():
         game()
     
     if my_random > num:
-        counter -= 1
-        print("Take bigger. You have %d attempts left." % counter)
+        print("Take bigger.")
         game()
-    elif my_random < num:
-        counter -= 1
-        print("Take smaller. You have %d attempts left." % counter)
+    elif my_random < num:       
+        print("Take smaller.")
         game()
-    elif counter == 0:
-        print("You lose! The number was %d" % random)
+    
     else:
-        print("Congratulation! You have won with %d attemts. The number is %d" % (counter, my_random))
+        print("Congratulation! The random number was %d" % my_random)
         return
 
 my_random = get_random_int (0, 100)
 game()
+
+answer = input("Would you like to play once more?")
+if answer == "yes" or answer == "да":
+    game()

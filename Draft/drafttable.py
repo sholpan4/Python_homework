@@ -1,12 +1,8 @@
-
-num = int(input("Enter a number from 2 to 9:"))
-
 def multipl_table():
-    if (num < 1) or (num > 9):
-        print("Error! Please enter a number from 2 to 9")
-    else:
-        for i in range(0, 11):
-            return num * i
-print(multipl_table)    
-    
-    
+    table = ''
+    for y in range(1, 11):
+        for x in range(1,11):
+            table += f' {x*y}\t'
+        table += f'\n'
+    return table
+print(multipl_table())
