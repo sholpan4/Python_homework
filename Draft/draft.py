@@ -1,10 +1,7 @@
-
-def recur(num, level = 7):
-
-        if num > 0:  
-            return
-        recur(num-1, level - 1)
-        print("😎")
-    
-user_in = int(input("How many times print 😎?"))
-recur(user_in - 1)
+num = int(input("Enter a number from 2 to 9:"))
+if (num < 1) or (num > 9):
+    print("Error! Please enter a number from 2 to 9")
+else:
+    for i in range(0, 11):
+        sum = num * i
+        print(num, "*", i, "=", sum)

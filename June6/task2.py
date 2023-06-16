@@ -1,4 +1,4 @@
-
+#task2
 def print_weekday(day=1):
     if day == 1:
         dayname = "Monday"
