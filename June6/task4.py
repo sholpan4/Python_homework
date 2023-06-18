@@ -30,6 +30,7 @@ def game():
         print("Take smaller. You have %d attempts left." % counter)
         game()
     elif counter == 0:
+        
         print("You lose! The number was %d" % random)
     else:
         print("Congratulation! You have won with %d attemts. The number is %d" % (counter, my_random))

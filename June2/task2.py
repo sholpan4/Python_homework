@@ -1,9 +1,10 @@
 #task2
-sum = 0
-num = 5
-for i in range(1, num + 1):   
-    sum += i    
+def get_sum_numbers(num):
+    total = 0
+    for n in num:
+        total += n
+    return total
+result = get_sum_numbers(5)
 
-print(sum)
-#самое простое что пришло в голову)
-# VN: только надо в виде функции сделать
+print(result)
+

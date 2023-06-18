@@ -1,7 +1,6 @@
-num = int(input("Enter a number from 2 to 9:"))
-if (num < 1) or (num > 9):
-    print("Error! Please enter a number from 2 to 9")
-else:
-    for i in range(0, 11):
-        sum = num * i
-        print(num, "*", i, "=", sum)
+number = 56789
+last_digit = number % 10
+number = number // 10 #деление без остатка
+new_number = last_digit * 10000 + number
+print(new_number)
+#task
