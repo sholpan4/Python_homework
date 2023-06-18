@@ -1,4 +1,3 @@
-
 #task3
 def multipl_table():
     table = ""
@@ -7,4 +6,5 @@ def multipl_table():
             table += f' {x*y}\t'
         table += f'\n'
     return table
+
 print(multipl_table())

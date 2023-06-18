@@ -3,8 +3,7 @@ def get_GCD(a, b):
     if a > b:
         temp = b
     else:
-        temp = a
-    
+        temp = a    
     for i in range(1, temp +1):
         if ((a % i == 0) and (b % i == 0)):
             gcd = i

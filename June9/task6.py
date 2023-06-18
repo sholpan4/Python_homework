@@ -1,4 +1,4 @@
-#task6s
+#task6
 def get_tbl_ASCII():
     list(range(32, 127))
     for i in range(32, 127):
