@@ -1,11 +1,12 @@
 #task3
-def turn_one_num(num, num2, num3):
+def get_one_num(num, num2, num3):
     # VN: Преобразование данных - не задача этой функции
-    num = int(num)
-    num2 = int(num2)
-    num3 = int(num3)
-    message = ("%d%d%d" % (num, num2, num3))
-    print(message)
+    num = str(num)
+    num2 = str(num2)
+    num3 = str(num3)
+    result = num + num2 + num3
+    return result
     # VN: функция не должна ничего печатать! Она должна вернуть число типа int
   
-number = turn_one_num(5, 4, 4)
+number = get_one_num(5, 4, 4)
+print(number)

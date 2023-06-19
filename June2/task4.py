@@ -1,5 +1,5 @@
 #task4
-def get_area(num, num2):
+def get_area(num=None, num2=None):
     a = int(num)
     b = int(num2)
     if a == 0:
