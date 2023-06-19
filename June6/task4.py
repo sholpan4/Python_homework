@@ -10,26 +10,28 @@ def get_random_int(min, max):
 print("Let's play game. You have to guess the number with 7 attempts. Good luck!")
 
 i = 0
-def game():
-    user_in = input("Your number from 0 tll 100:")
+def game(num, attemts = 7):
+    num = input("Your number from 0 tll 100:")
 
     try:
-        num = int(user_in)
+        num = int(num)
     except ValueError:
         print("Enter only number!")
-        game()
+        game(num)
 
     if my_random > num:
-        print("Take bigger.") 
-        game()
+        attemts -= 1
+        print("Take bigger. %d attemts" % attemts) 
+        game(num)
     elif my_random < num:
-        print("Take smaller. ")    
-        game()
+        attemts -= 1
+        print("Take smaller. %d attemts" % attemts)    
+        game(num)
     else:
-        print("Congratulation! You have won. The number is %d" % my_random)
-
-    i += 1
-    print(i, "attemts")
+        attemts -= 1
+        print("Congratulation! You have won. The number is %d." % my_random)
+    if attemts == 0:
+        print("You lose!")
 
 my_random = get_random_int (0, 100)
 game()
