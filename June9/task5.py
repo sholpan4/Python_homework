@@ -1,22 +1,15 @@
-
-
-num = int(input("Enter at least two digit number:"))
+#task5
+num = int(input("Enter six digit number:"))
 n = int(input("How many digits to replace?"))
-result = ""
+result = 0
 
-def get_new_number():
-    while num > 99:
-        result = ""
-        last_digit = num % 10
-        num = num // 10
-        new_num = last_digit * 10000 + num
-        result += new_num
-        return result
-        recur(n-1)
+while n > 0:   
+    last_digit = num % 10
+    num = num // 10
+    result = last_digit * 100000 + num
+    n -= 1
+else:
+    result
 
-msg = get_new_number()
-print(msg)
-
-
-
-
+print(result)
+#(( не смогла переставить полностью, подсказку пожалуйста

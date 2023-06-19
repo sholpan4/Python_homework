@@ -27,9 +27,7 @@ def game():
         game()
     else:
         print("Congratulation! You have won. The number is %d" % my_random)
-        
 
-   
     i += 1
     print(i, "attemts")
 
