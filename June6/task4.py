@@ -9,13 +9,14 @@ print("Let's play game. You have to guess the number with 7 attempts. Good luck!
 
 def game(): 
     user_in = input("Your number from 0 tll 100:")
-   
+    counter = 7
     try:
         num = int(user_in)
     except ValueError:
         print("Enter only number!")
         game()
-    
+
+
     if my_random > num:
         print("Take bigger.")
         game()
