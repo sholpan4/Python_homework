@@ -1,32 +1,29 @@
+#task4
+num = int(input("Enter number:"))
 
-list_num = [int(input("Enter 10 numbers with "," "))]
+even = 0
+odd = 0
+# negetive = 0
+possitive = 0
+zero = 0
 
-def check_list(list_num):
-    result = 0
-    index = 0
-    count_pos = 0
-    count_neg = 0
-    count_even = 0
-    count_odd = 0
-    count_zero = 0
-    
-    for x in range(list_num):
-        if x % 2 == 0:
-            count_even += 1
-            result += x
-        else:
-            count_odd += 1
-            result += x
-        if x < 0:
-            count_pos += 1
-            result += x
-        else:
-            count_neg += 1
-            result += x
-        if x == 0:
-            count_zero +=1
-            result += x
-    return result
+while num > 0:
+    if num % 2 == 0:
+        even += 1
+    else:
+        odd += 1
+    num = num // 10  # VN: эта строка не нужна. Непонятно для чего это деление
+                     # UPD: кажется, понял вашу мысль, но 10 раз повторить цикл - это делается по-другому
 
-msg = check_list(list_num)
-print(msg)
+    # if num < 0:
+    #     negetive += 1
+    if num > 0:
+        possitive +=1
+    elif num == 0:
+        zero +=1
+
+print(f'Even: {even}, odd: {odd}')
+print(f'Possitive: {possitive}, zero: {zero}') #negetive: {negetive}
+
+#((( не могу понять как вводить отрицательные числа (посчитать условия вроде правильные)
+# VN: строку 2 перенесите внутрь цикла. А цикл должен быть другой, чтобы повторялся только 10 раз
