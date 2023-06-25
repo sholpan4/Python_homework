@@ -10,8 +10,8 @@
 
 class Earphone:
     color = " "
-    size = 0
     model = " "
+    size = 0
     volume = 0
     bottom = True or False
     charge = 0
@@ -40,4 +40,14 @@ class Earphone:
             print("Can't rise volume up!")
             
     def charge(self, charge):
-        
+        charge = input("Charge? Yes/No")
+        if answer == "Yes":
+            print("Charged")
+        else:
+            print("Battery is low!")
+            
+earphone_1 = Earphone()
+earphone_1.volume_up(70)
+print(earphone_1)
+
+earphone

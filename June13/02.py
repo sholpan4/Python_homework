@@ -1,3 +1,2 @@
-class Door:
-    color = " "
-    size = 0
+class Calculator:
+    
