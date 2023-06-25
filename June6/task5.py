@@ -32,4 +32,8 @@ game()
 
 answer = input("Would you like to play once more?")
 if answer == "yes" or answer == "да":
+    # VN: То же самое загаданное число остаётся
     game()
+
+# Эту проверку: "Would you like to play once more?" нужно зациклить в рекурсивной функции.
+# В ней же генерировать новое случайное число
