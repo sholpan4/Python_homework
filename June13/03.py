@@ -1,4 +1,5 @@
 from random import randint
+
 class Magic:
     magic_type = " "
     lightning = 0
@@ -10,8 +11,7 @@ class Magic:
     def __init__(self, magic_type, earth = 0):
         self.magic_type = magic_type
         self.earth = randint(-100, 5000)
-
-    
+        
     def __repr__(self) -> str:
         msg = "Magic: %s " % (self.magic_type)
         return msg 
@@ -52,8 +52,7 @@ class Magic:
             print("Not bad. You get a 'Galit'.")            
         elif -100 <= a <= 1499:            
             print("It's a beginning! 'Solid carbon dioxide' also good.")
-
-            
+           
 magician_1 = Magic("C4")
 magician_1.get_explosion(0, 0)
 print(magician_1)

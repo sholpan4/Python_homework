@@ -11,8 +11,7 @@ class Credit_cards:
         self.bank = bank
         self.kind = kind
         self.number = randint(4000000000000000, 4999999999999999)
-
-    
+ 
     def __repr__(self) -> str:
         msg = "Credit card of the Bank: %s, type/kind: %s, number: %d " % (self.bank, self.kind, self.number)
         return msg 
@@ -50,8 +49,7 @@ class Credit_cards:
             print("Converted $ %d to %d tenge" % (amount, result))
         else:
             print("Not enought balance!")                   
-        
-        
+               
 hcb = Credit_cards("Home Cradit Bank", "Visa")
 hcb.show_replenishment_of_balance()
 hcb.pay()
