@@ -17,6 +17,7 @@ class Magic:
         return msg 
     
     def get_explosion(self, fire, lightning):
+        # VN: fire и lightning передаются в метод в виде аргументов, поэтому следующие две строки здесь лишние
         fire = int(input("How much heat you need from 1 to 100? "))
         lightning = int(input("How much volt you need from 1 to 10? "))
         if fire <= 35 and lightning <= 3:
@@ -29,6 +30,7 @@ class Magic:
             print("Please enter number in proposed range!")      
         
     def get_magnetism(self, water, ligthning = 0):
+        # VN: то же самое
         water = input("To make it rain with thunder press the bottom 'Y' ")            
         if water == "Y" or "y":
             print("Whaaa!!! It's raining with a thunder!")           

@@ -3,7 +3,7 @@ class Earphone:
     model = " "
     weight = 0
     volume = 0
-    bottom = True or False
+    bottom = True or False  # Python вычислит это выражение, и bottom будет True
     charge = 0
         
     def __init__(self, color, model, weight):
@@ -16,6 +16,9 @@ class Earphone:
         return msg    
             
     def play_music(self, bottom):
+        # VN: значение bottom передаётся методу в виде аргумента. Следующая строка не нужна.
+        # Метод play_music должен ведь не задавать вопросы пользователю, а играть музыку, верно?
+        # Это замечание касается всех ваших классов
         bottom = input("Play? ")
         if bottom == "yes":
             print("Playing the music.")
