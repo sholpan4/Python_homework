@@ -7,12 +7,12 @@ class Kassa:
     def register_train(self, train):
         self.tickets.append(new_ticket)
 
-        # for t in self.trains:
-        #     if t.source == source and t.destination == destination:
-        #         return
-        #     elif t.destination == "Сантьяго":
-        #         msg = "Этого маршрута нет с списке"
-        #         return msg
+        for t in self.trains:
+            if t.source == source and t.destination == destination:
+                return 
+            elif t.source != source and t.destination != destination:
+                msg = "Этого маршрута нет с списке"
+                return msg
 
 
     def get_price(self, source, destination):
@@ -24,6 +24,7 @@ class Kassa:
         if money:
             self.balance += money
             # person.ticket = Ticket(source, destination,person.name, person.iin, person.age)
+            
             new_ticket = Ticket(source, destination,person.name, person.iin, person.age)
             self.tickets.append(new_ticket)
             print("Номер вашего билета -", new_ticket.number)
