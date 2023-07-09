@@ -1,0 +1,2 @@
+#Modify list with strings and numbers adding word 'Good' to the front of each strings and square all numbers.
+#Изменить список состоящий из слов и цифр с добавлением к словам 'Good' с переди и вывести цифры в квадрат.
