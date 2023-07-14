@@ -10,3 +10,6 @@ for i in range(len(new_list)):
             list_1.remove(list_2[x])
             
 print(list_1)
+
+#VN: вариант с filter:
+# new_list = list(filter(lambda x: x not in list_2, list_1))

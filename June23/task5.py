@@ -12,4 +12,7 @@ if a < b:
 else:
     result = a - b
 
+#VN: чтобы здесь обойтись без условия, можно использовать функцию abs:
+# result = abs(b-a)
+
 print(result)
