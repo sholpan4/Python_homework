@@ -11,6 +11,8 @@ print(text)
 
 def get_syllables(word):
     syllable_word = ''
+    # VN: Если здесь ^^ вместо строки использовать пустой список [], а вместо syllable_word = word[i] + '-' 
+    # делать append в этот список, то его потом можно сджоинить через '-' и дефиса в конце точно не будет)
     for i in range(len(word)):
         vowels = 'оаие'
         # consonants = 'мл' #как сделать чтобы двойные согласные переносились?
@@ -24,5 +26,7 @@ new_text = list(map(get_syllables, text))
 result = ''.join(new_text)
 # syllables = reduce(lambda acc , x: acc - x[i] if x[i].endswith('-') else acc, result)
 #((( убрать дефис в конце как?
+# VN: можно с помощью метода rstrip
+
 print(result)
 # print(syllables)    
