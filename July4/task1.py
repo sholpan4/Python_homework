@@ -1,3 +1,5 @@
+#task1
+
 # "Парсинг электронной почты"
 # Разработайте программу, которая выполняет парсинг текста и извлекает из него адреса
 # электронной почты. Пользователь должен ввести текст, а программа должна анализировать
@@ -12,13 +14,21 @@ text = my_file.read()
 my_file.close()
 
 def find_email(word):
-    for i in range(len(word)):
-        if word[i] == '@':
+    if '@' in word:
+        if word.endswith(('com', 'ru','kz')):
             return True
-    return False
+    else:
+        return False
+
+
+# def find_email(word):
+#     for i in range(len(word)):
+#         if word[i] == '@':
+#             return True
+#     return False
 # В этой функции есть проблема: она считает почтовым адресом любое слово, где есть @
 # Например, слова '@dsfsf' или 'ололо@', или даже просто слово из одного символа '@'
 # Хотя они не являются адресами.
 
-filtered = filter(find_email, text.split())
-print(list(filtered))
+emails = list(filter(find_email, text.split()))
+print(emails)
