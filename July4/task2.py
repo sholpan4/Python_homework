@@ -1,4 +1,5 @@
 #task2
+from functools import reduce
 # про-грам-ми-ро-ва-ни-е
 # брил-ли-ант
 # ба-ле-ри-на
@@ -12,26 +13,16 @@ def get_syllables(word):
     syllable_word = ''
     for i in range(len(word)):
         vowels = 'оаие'
-        consonants = 'мл'
+        # consonants = 'мл' #как сделать чтобы двойные согласные переносились?
         if word[i] in vowels:
-            syllable_word = word[i] + '-'
-        elif word[i] in consonants:
-            syllable_word = word[i] + '-' + word[i]
-            # syllable_word += word[i+1]
+            syllable_word = word[i] + '-'  
         else:
-            syllable_word += word[i]
+            syllable_word += word[i]        
     return syllable_word
-
-def correct_syllables(word):
-    new_word = ''
-    for i in range(len(word)):
-        if word[i].endswith('-'):
-            new_word = '\n' + word[i]
-    return ''.join(new_word)
 
 new_text = list(map(get_syllables, text))
 result = ''.join(new_text)
-syllables = correct_syllables(result)
-
+# syllables = reduce(lambda acc , x: acc - x[i] if x[i].endswith('-') else acc, result)
+#((( убрать дефис в конце как?
 print(result)
-print(syllables)    
+# print(syllables)    
