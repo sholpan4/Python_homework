@@ -1,27 +1,26 @@
-# from cryptography.fernet import Fernet
-
-# key = Fernet.generate_key()
-
-# with open('mykey.key', 'wb') as mykey:
-#     mykey.write(key)
-
 text = 'SOS'
 print(len(text))
-result = [ord(text[0]), ord(text[1]), ord(text[2])]
+result = ord(text[0]), ord(text[1]), ord(text[2])
 print(result)
 
-def get_letter(word):
+def get_ord(word):
+    secret_ord = ''
+    for i in range(len(word)):
+        a = str(ord(word[i]) + 1)
+        secret_ord += a + ' '
+    return secret_ord
+
+secert_num = get_ord(text)
+print(secert_num)
+num = secert_num.strip(' ')
+print(num)
+
+def get_secret_letter(numbers):
     secret_txt = ''
-#     # alph = 'OPQRSTUV'
-#     # a = ord(word[0])
-#     # b = ord(word[1])
-#     # c = ord(word[2])
-    for i in word:
-        secret_txt += ord(word[i]+1)
+    for x in numbers:
+        letter = chr(x)
+        secret_txt += letter
     return secret_txt
-       
-     
-# # print(text) 
-print(get_letter(text))
-# # result = list(filter(get_letter, text))   
-# # print(result)
+
+secret_text = get_secret_letter(num)
+print(secret_text)
