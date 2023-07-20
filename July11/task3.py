@@ -1,8 +1,14 @@
-text = 'SOS'
-# print(len(text))
-# result = ord(text[0]), ord(text[1]), ord(text[2])
-# print(result)
-# result = '84 80 84'
-# letter = chr(result)
-# print(letter)
-print(chr(84))
+my_file = open('decrypt-text.txt', encoding="utf-8")
+text = my_file.read()
+my_file.close()
+
+def get_secret_word(word):
+    secret_ord = ''
+    for i in range(len(word)):
+        num = ord(word[i]) - 1
+        letter = chr(num)
+        secret_ord += letter
+    return secret_ord
+
+secert_num = get_secret_word(text)
+print(secert_num)

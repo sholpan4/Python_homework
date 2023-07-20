@@ -1,20 +1,20 @@
-config = {}
+# config = {}
 
-cfg_file = open('url.ini', encoding='utf-8')
-my_config = cfg_file.readlines()
-cfg_file.close()
+# cfg_file = open('url.ini', encoding='utf-8')
+# my_config = cfg_file.readlines()
+# cfg_file.close()
 
 # current_section = ""
-# my_config = ('https://www.google.com/search?q=palyndromes&rlz=1C1IXYC_ruKZ1059KZ1059&oq=&aqs=chrome.0.69i59i450l8.20045872j0j15&sourceid=chrome&ie=UTF-8')
+my_config = 'https://www.google.com/search?q=palyndromes&rlz=1C1IXYC_ruKZ1059KZ1059&oq=&aqs=chrome.0.69i59i450l8.20045872j0j15&sourceid=chrome&ie=UTF-8'
 print(my_config)
 res = []
 
-for sub in my_config.split(', '):
+for sub in my_config.split(' '):
     if '=' in sub:
-        res.append(map(str.strip, sub.split('=', 1)))
+        res.append(map(my_config.strip, sub.split('=', 1)))
     res = dict(res)
     
-print(+ str(res))
+print(str(res))
 
 
 
