@@ -7,26 +7,26 @@
 # current_section = ""
 my_config = 'https://www.google.com/search?q=palyndromes&rlz=1C1IXYC_ruKZ1059KZ1059&oq=&aqs=chrome.0.69i59i450l8.20045872j0j15&sourceid=chrome&ie=UTF-8'
 print(my_config)
-res = []
+# res = []
 
-for sub in my_config.split(' '):
-    if '=' in sub:
-        res.append(map(my_config.strip, sub.split('=', 1)))
-    res = dict(res)
+# for sub in my_config.split(' '):
+#     if '=' in sub:
+#         res.append(map(my_config.strip, sub.split('=', 1)))
+#     res = dict(res)
     
-print(str(res))
+# print(str(res))
 
 
 
-# for x in my_config:
-#     # my_config = x.split('=')
-#     my_config = x.split(':')
-#     protocol = my_config[0]
-#     # my_config = x.split('/')
-#     domen = x[1].startswith('//') and x[1].endswith('com')
+for x in my_config:
+    # my_config = x.split('=')
+    my_config = x.split(':')
+    protocol = my_config[0]
+    # my_config = x.split('/')
+    domen = my_config[1].startswith('//') + my_config[1].endswith('com')
     
     
-# print('протокол:', protocol, 'домен:', domen) 
+print('протокол:', protocol, 'домен:', domen) 
    
 # my_list = ['apple', 'banana', 'orange']
 
@@ -45,17 +45,17 @@ print(str(res))
 # Output: 0: apple, 1: banana, 2: orange
 
 
-url= 'https://www.google.com/search?q=palyndromes&rlz=1C1IXYC_ruKZ1059KZ1059&oq=&aqs=chrome.0.69i59i450l8.20045872j0j15&sourceid=chrome&ie=UTF-8'
+# url= 'https://www.google.com/search?q=palyndromes&rlz=1C1IXYC_ruKZ1059KZ1059&oq=&aqs=chrome.0.69i59i450l8.20045872j0j15&sourceid=chrome&ie=UTF-8'
 # protokol_div = url.partition(':')
 # protokol = protokol_div[0]
 
 
-def get_domen(url):
-    domen = ''
-    for i in range(len(url)):
-        if i == '/':
-            domen += url
-            return domen
+# def get_domen(url):
+#     domen = ''
+#     for i in range(len(url)):
+#         if i == '/':
+#             domen += url
+#             return domen
 
 # def get_protokol(word):  
 #     if word.endswith(':'):
