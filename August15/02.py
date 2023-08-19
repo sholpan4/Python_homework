@@ -4,7 +4,7 @@ user_in = input("Введите числа через запятую: ")
 user_in = user_in.split(',')
 my_list = list(map(lambda x: int(x), user_in))
 
-def select_sort(the_list):
+def select_sort(my_list):
     sorted_list = []
     for _ in range(len(my_list)):
         # min_elem = min(my_list)
