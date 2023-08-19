@@ -15,5 +15,4 @@ def quick_sort(the_list):
     result = quick_sort(less) + equals + quick_sort(more)
     return result
 
-
 print(quick_sort(my_list))
