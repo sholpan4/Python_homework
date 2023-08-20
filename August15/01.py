@@ -13,6 +13,25 @@ def bubble_sort(num_list, key = None):
                 counter += 1
         if counter == 0:
             break
-    return num_list
-    
+    # return num_list
+        continue
+
+    if key:
+        new_list = []
+        for i in range(len(num_list)):
+           new_list.append(num_list[i])
+        return new_list
+    else:
+        return num_list
+               
 print(bubble_sort(my_list))
+print(bubble_sort(my_list, key=lambda x: x ** 2))
+
+# def bubble_sort(my_list, key=None):
+#   for i in range(len(my_list) - 1):
+#     for j in range(len(my_list) - i - 1):
+#       if key(my_list[j]) > key(my_list[j + 1]):
+#         my_list[j], my_list[j + 1] = my_list[j + 1], my_list[j]
+#   return my_list
+
+# print(bubble_sort(my_list, key=lambda x: x ** 2))
