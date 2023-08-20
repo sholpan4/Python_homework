@@ -4,7 +4,7 @@ user_in = input("Введите числа через запятую: ")
 user_in = user_in.split(',')
 my_list = list(map(lambda x: int(x), user_in))
 
-def quick_sort(the_list):
+def quick_sort(the_list, key = None):
     if len(the_list) <= 1:
         return the_list
     pivot = the_list[0]
