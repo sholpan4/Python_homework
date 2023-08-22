@@ -18,15 +18,9 @@ def bubble_sort(num_list, key = None):
     
     if key:
         new_list = []
-        second_list = []
         for i in range(len(num_list)):
-            if not key(num_list[i]):
-                second_list.append(num_list[i])
-            elif key(num_list[i]) is True:
-                new_list.append(num_list[i])
-            else:
-                new_list.append(key(num_list[i]))
-        return new_list + second_list
+            if key(num_list[i]):
+                new_list.append(num_list[i]) # не получается додумать
     else:
         return num_list
                
