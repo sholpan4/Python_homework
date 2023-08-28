@@ -9,7 +9,7 @@ from PyQt6.QtWidgets import (
 
 app = QApplication([])
 window = QWidget()
-window.setWindowTitle("QGridLayout")
+window.setWindowTitle("Calculator")
 
 layout = QGridLayout()
 layout.addWidget(QPushButton("AC"), 0, 1)

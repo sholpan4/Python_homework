@@ -1,7 +1,7 @@
 
 def my_sum(num, *args, **kwargs):
     result = num
-    print(args);
+    print(args)
     print(kwargs)
     for x in args:
         result += x
