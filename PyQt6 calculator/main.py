@@ -6,14 +6,17 @@
 import sys
 from PyQt6.QtWidgets import QApplication
 from calc_main import CalcMainWindow
-from qt_pt import Calc
+from qt_pt import SimpleCalcView
+from calc_model import SimpleCalcModel
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
 
     window = CalcMainWindow('Calc')
-    view = Calc()
+    view = SimpleCalcView()
+    model = SimpleCalcModel()
 
+    view.set_model(model)
     window.set_view()
     window.show()
     app.execa()

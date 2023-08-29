@@ -8,17 +8,24 @@ from PyQt6.QtWidgets import *
 #     QWidget,
 # )
 
-class Calc(QWidget):
+class SimpleCalcView(QWidget):
     main_display: QLabel = None
+
+    def on_button_pressed(self):
+        
     def __init__(self):
         super().__init__()
-        main_layout = QVBoxLayout()
+        central_widget = QWidget()
+        main_layout = QVBoxLayout(central_widget)
         self.setLayout(main_layout)
 
-        self.main_display = QLabel(text='0')
-        # self.main_display.setFont(QFont('Monospace', 20, QFont.Weight.Normal, False))
-        # self.main_display.setAlignment(Qt.AlignmentFlag.AlignRight)
-        main_layout.addWidget(self.main_display)
+        result_label = QLabel("0")
+        main_layout.addWidget(result_label)
+
+        # self.main_display = QLabel(text='0')
+        # # self.main_display.setFont(QFont('Monospace', 20, QFont.Weight.Normal, False))
+        # # self.main_display.setAlignment(Qt.AlignmentFlag.AlignRight)
+        # main_layout.addWidget(self.main_display)
 
         app = QApplication([])
         window = QWidget()
@@ -26,6 +33,7 @@ class Calc(QWidget):
 
         layout = QGridLayout()
         layout.addWidget(QPushButton("AC"), 0, 1)
+        layout.addWidget(QPushButton("C"), 0, 2)
         layout.addWidget(QPushButton("%"), 0, 3)
         layout.addWidget(QPushButton("/"), 0, 4)
 
@@ -48,7 +56,14 @@ class Calc(QWidget):
         layout.addWidget(QPushButton(","), 4, 3)
         layout.addWidget(QPushButton("="), 4, 4)
 
-        window.setLayout(layout)
+        main_layout.addLayout(layout)
+
+        window.setLayout(main_layout)
 
         window.show()
-        sys.exit(app.exec())
+        # sys.exit(app.exec())
+        app.exec()
+
+    def set_model(self, model):
+        self.calc_model = model
+        self.main_layout.setText(model.get_display)
