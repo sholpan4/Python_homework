@@ -12,7 +12,20 @@ class SimpleCalcView(QWidget):
     main_display: QLabel = None
 
     def on_button_pressed(self):
-        
+        btn = self.sender()
+        key_text = btn.text
+        print(key_text)
+        self.calc_model.command(key_text)
+        self.main_layout.setText(self.calc_model.get_display())
+
+        # btn = QPushButton(text='5')
+        # btn.clicked.connect(lambda: self.on_button_pressed('5'))
+
+    def keyPressEvent(self, event):
+        key_text = event.text()
+        self.calc_model.command(key_text)
+        self.main_layout.setText(self.calc_model.get_display())
+        super().keyPressEvent(event)
     def __init__(self):
         super().__init__()
         central_widget = QWidget()
@@ -66,4 +79,4 @@ class SimpleCalcView(QWidget):
 
     def set_model(self, model):
         self.calc_model = model
-        self.main_layout.setText(model.get_display)
+        self.main_layout.setText(model.get_display())

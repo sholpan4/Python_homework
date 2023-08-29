@@ -11,26 +11,26 @@ class SimpleCalcModel:
 
     def command(self, key: str):
         if key != "=":
-        if key.isdigit():
-            if self.__display == '0':
-                self.__display = key
+            if key.isdigit():
+                if self.__display == '0':
+                    self.__display = key
+                else:
+                    self.__display += key
             else:
-                self.__display += key
-        else:
-            if self.__display[-1] not in "+-*/":
-                self.__display += key
+                if self.__display[-1] not in "+-*/":
+                    self.__display += key
 
-            else:
-                self.__display += key
+                else:
+                    self.__display += key
 
-        if key == "C":
-            if len(self.__display) == 1:
-                self.__display = self.__display
-            else:
-                self.__display = self.__display[:-1]
+            if key == "C":
+                if len(self.__display) == 1:
+                    self.__display = self.__display
+                else:
+                    self.__display = self.__display[:-1]
 
-        if key == "AC":
-            self.__display = "0"
+            if key == "AC":
+                self.__display = "0"
 
 
 
