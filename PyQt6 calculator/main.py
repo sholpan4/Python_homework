@@ -6,8 +6,14 @@
 import sys
 from PyQt6.QtWidgets import QApplication
 from calc_main import CalcMainWindow
-from qt_pt import SimpleCalcView
-from calc_model import SimpleCalcModel
+from calc_view import *
+from calc_model import *
+from calc_control import CaclControlWidget
+
+def switch_mode(name):
+    if name == "Account":
+        view = AccountCalcView()
+        model = AccountCalcModel()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
@@ -15,7 +21,9 @@ if __name__ == '__main__':
     window = CalcMainWindow('Calc')
     view = SimpleCalcView()
     model = SimpleCalcModel()
+    control = CaclControlWidget()
 
+    window.set_control(control)
     view.set_model(model)
     window.set_view()
     window.show()

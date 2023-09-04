@@ -43,6 +43,16 @@ class AccountCalcModel(SimpleCalcModel):
         if key in "()":
             self._display += key
         elif key == "%":
+            last_vaue_index = max(self._display.rfind("-"),
+                                  self._display.rfind("+"),
+                                  self._display.rfind("/"),
+                                  self._display.rfind("*"),)
+            if last_vaue_index < 0:
+                return
+            last_value = self._display[last_vaue_index:]
+            self._display = self._display[:last_vaue_index]
+            self.calculate()
+
 
             pass
         else:
