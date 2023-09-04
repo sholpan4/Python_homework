@@ -38,6 +38,22 @@ class SimpleCalcModel:
     def get_display(self):
         return self.__display
 
+class AccountCalcModel(SimpleCalcModel):
+    def command(self, key: str):
+        if key in "()":
+            self._display += key
+        elif key == "%":
+
+            pass
+        else:
+            super().command(key)
+
+
+
+
+
+
+
 if __name__ == '__main__':
     print('Testing model')
     calc = SimpleCalcModel()
