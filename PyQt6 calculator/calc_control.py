@@ -1,7 +1,7 @@
 from PyQt6.QtWidgets import *
 from PyQt6.QtCore import pyqtSignal
 
-class CaclControlWidget(QWidget):
+class CalcControlWidget(QWidget):
     switched : pyqtSignal = None
 
     def calc_mode_switch(self):
