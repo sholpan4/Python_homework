@@ -8,7 +8,7 @@ from PyQt6.QtWidgets import QApplication
 from calc_main import CalcMainWindow
 from calc_view import *
 from calc_model import *
-from calc_control import CaclControlWidget
+from calc_control import CalcControlWidget
 
 def switch_mode(name):
     if name == "Account":
