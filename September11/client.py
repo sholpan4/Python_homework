@@ -3,9 +3,10 @@ import socket
 class UDP_Client:
     address = 'lockalhost'
     port = 0
-    my_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
-    def __init__(self, address, port) -> None:
+    def __init__(self, address, port):
+        super().__init__()
+        self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         self.address = address
         self.port = port
 
@@ -13,11 +14,11 @@ class UDP_Client:
     def send(self, message):
         is_running = True
         while is_running:
-            message = input('Введите что-нибудь(желательно на английском): ')
-            my_socket.sendto(message.encode(), server_addres)
+            message = input('Enter: ')
+            self.socket.sendto(message.encode(), self.address)
             if message == 'exit':
                 is_running = False
     
-    def receive(self):
+    def receive(self, message):
         pass
 
