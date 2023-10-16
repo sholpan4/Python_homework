@@ -10,5 +10,11 @@
 import sys
 import re
 
-with open(sys.argv[1], 'r') as data_file:
-    data = data_file.read().split()
+with open('sum.txt') as data_file:
+    data = data_file.read()
+
+pattern = r"\d"
+def convert_to_kzt():
+    
+    for sum in data:
+        matched = re.search
