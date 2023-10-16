@@ -11,4 +11,11 @@
  - Интерпретаторы
 Глава 2. Переменные
 ...
-```
+
+import sys
+import re
+
+with open(sys.argv[1], 'r') as data_file:
+    data = data_file.read().split()
+
+pattern = r"\w[\w\.-_]+\w@\w[\w\.-_]+\.[a-zA-Z]{2,3}"
