@@ -1,4 +1,7 @@
 from ticket import Ticket
+from train import Train
+
+
 class Kassa:
     balance = 0
     tickets = []
@@ -13,7 +16,6 @@ class Kassa:
             elif t.source != source and t.destination != destination:
                 msg = "Этого маршрута нет с списке"
                 return msg
-
 
     def get_price(self, source, destination):
         return (len(source) + len(destination)) * 1000
@@ -38,5 +40,8 @@ class Kassa:
 
     def delete_ticket(self, ticket):
         self.tickets.remove(ticket)
+
+    def register_train(self, trains):
+        pass
 
 print("Это касса", __name__)
