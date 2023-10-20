@@ -5,3 +5,4 @@ age = today.year - birthday.year - \
 ((today.month, today.day) < (birthday.month, birthday.day))
 print("Возраст:"
 , age)
+#works
