@@ -24,6 +24,7 @@ def  main():
             date_str = input("Enter date and time of event (yyyy-mm-dd  hh:mm): ")
             try:
                 date_time = datetime.datetime.strftime(date_str, '%Y-%m-%d %H:%M') #подскажите как записать дату, время
+                #VN:                   strptime  ^
                 print("Event added.")
             except ValueError:
                 print("Error: Wrong format of date and time.")
@@ -37,3 +38,5 @@ def  main():
 
 if __name__ == '__main__':
     main()
+
+#VN: кажется, это неполное решение задачи

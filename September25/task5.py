@@ -6,3 +6,4 @@ def get_data(data):
             print("Неизвестный словарь")
 
 print(get_data("'name': Ilon"))
+#VN: ну вы поняли)))

@@ -9,3 +9,4 @@ def get_point(point):
             print("Точка не в первом и не втором квадранте")
 
 print(get_point(3, 7))
+#VN: None
