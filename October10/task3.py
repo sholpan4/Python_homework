@@ -7,14 +7,34 @@
 #выходного файлов:
 #> python converter.py input.txt output.txt
 
-import sys
 import re
 
-with open('sum.txt') as data_file:
-    data = data_file.read()
+def convert_usd_to_tenge(amount_usd, exchange_rate):
+    return f'{amount_usd * exchange_rate:.2f} ₸'
 
-pattern = r"\d"
-def convert_to_kzt():
-    
-    for sum in data:
-        matched = re.search
+def main():
+    input_file = 'sum.txt'
+    output_file = 'result.txt'
+    exchange_rate = 480
+
+    try:
+        with open('sum.txt', 'r', encoding='utf-8') as file:
+            content = file.read()
+            pattern = r'\$([0-9]+)'
+            matches = re.findall(pattern, content)
+            for match in matches:
+                amount_usd = float(match)
+                converted_amount = convert_usd_to_tenge(amount_usd, exchange_rate)
+                content = content.replace(f"${amount_usd}", converted_amount)
+            with open('result.txt', 'w', encoding='utf-8') as output:
+                output.write(content)
+            print(f"Successful convertation from dollar to tenge and was saved in {output_file} file.")
+    except FileNotFoundError:
+        print(f"File '{input_file}' not found.")
+    except Exception as e:
+        print(f"Error: {str(e)}")
+
+if __name__ == '__main__':
+    main()
+
+#конвертация не получается
