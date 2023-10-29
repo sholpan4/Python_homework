@@ -4,17 +4,19 @@
 
 import time
 
-def measuretime(function):
-    def wrapped(*args):
-        start_time = time.perf_counter_ns()
-        result = function(*args)
-        print(time.perf_counter_ns() - start_time)
+def measuretime(func):
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        execution_time = (end_time - start_time) * 1000  # Время в миллисекундах
+        print(f"{func.__name__}() - {execution_time:.2f} мс")
         return result
-    return wrapped
+    return wrapper
+
 
 @measuretime
-def func(first, second):
-    return bin(int(first, 2) + int(second, 2))
+def some_function():
+    time.sleep(2)
 
-
-print(func("111", "0000"))
+some_function()
