@@ -1,0 +1,4 @@
+index.html
+dgs.png
+hello.py
+data.txt
