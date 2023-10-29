@@ -31,6 +31,7 @@ try:
     with open(html_file, 'r', encoding='utf-8') as file:
         html_content = file.read()
         soup = BeautifulSoup(html_content, 'html.parser')
+        #VN:   ^^^^^^^^^^^^^ это интересно :) но дз, всё-таки, на использование регулярных выражений
         title = soup.find('title')
         if title:
             print(title.text)
